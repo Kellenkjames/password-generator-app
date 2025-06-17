@@ -4,3 +4,117 @@
 // Quick utility classes (e.g., visually hidden, text-center)
 // Optional classes used to patch edge cases or override spacing
 // ---------------------------------------------
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// ---------------------------------------------
+// GENERAL UTILITY CLASSES
+// ---------------------------------------------
+
+.text-center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+}
+
+// ---------------------------------------------
+// FLEXBOX UTILITIES
+// ---------------------------------------------
+
+// Flex Alignment Map (used in utility mixins)
+// Keys: center, start, end, between, around, evenly
+$flex-alignments: (
+  center: center,
+  start: flex-start,
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+);
+
+// Flex row layout (horizontal)
+@mixin flex-row($justify: center, $align: center, $wrap: wrap, $gap: null) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: $wrap;
+  justify-content: if(
+    map-has-key($flex-alignments, $justify),
+    map-get($flex-alignments, $justify),
+    $justify
+  );
+  align-items: if(
+    map-has-key($flex-alignments, $align),
+    map-get($flex-alignments, $align),
+    $align
+  );
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+// Flex column layout (vertical)
+@mixin flex-column(
+  $justify: center,
+  $align: center,
+  $wrap: nowrap,
+  $gap: null
+) {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: $wrap;
+  justify-content: if(
+    map-has-key($flex-alignments, $justify),
+    map-get($flex-alignments, $justify),
+    $justify
+  );
+  align-items: if(
+    map-has-key($flex-alignments, $align),
+    map-get($flex-alignments, $align),
+    $align
+  );
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+// Shorthand centering (horizontal + vertical)
+@mixin flex-center-center {
+  @include flex-row(center, center);
+}
+
+// Horizontal: space-between | Vertical: center
+@mixin flex-space-between-center {
+  @include flex-row(between, center);
+}
+
+// ---------------------------------------------
+// MEDIA QUERY UTILITIES — max-width strategy
+// ---------------------------------------------
+
+// Usage: @include respond-to(md) { ... }
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "🚨 Unknown breakpoint: #{$breakpoint}.";
+  }
+}

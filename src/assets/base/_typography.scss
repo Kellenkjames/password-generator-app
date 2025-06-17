@@ -4,3 +4,42 @@
 // Responsive type sizing, weights, and line heights
 // Uses design tokens for rem-based scaling and hierarchy
 // ---------------------------------------------
+
+@use '../abstracts/variables' as *;
+
+// Headings
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+}
+
+// Paragraphs
+
+p {
+  margin: 0;
+  color: $color-text;
+  line-height: 1.5;
+}
+
+// Emphasis
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+// Anchor Tags
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

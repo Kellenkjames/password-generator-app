@@ -4,3 +4,43 @@
 // Applies global element-level styles (body, a, button, etc.)
 // Forms the foundation of the app’s base styling layer
 // ---------------------------------------------
+
+@use '../abstracts/variables' as *;
+
+html {
+  font-size: 62.5%; // 1rem = 10px for easy rem conversion
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.5;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Utility: Visually Hidden
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+}

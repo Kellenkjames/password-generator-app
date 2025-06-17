@@ -1,6 +1,24 @@
 // ---------------------------------------------
 // TYPOGRAPHY: FONT SYSTEM
 // ---------------------------------------------
-// Font-face declarations and font stack management
-// Used in `_typography.scss` and scoped component overrides
+// Font-face declarations for JetBrains Mono (variable weight)
+// Loaded locally from /assets/fonts for better performance
 // ---------------------------------------------
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../assets/fonts/JetBrainsMono-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 100 800;
+  font-style: italic;
+  font-display: swap;
+}

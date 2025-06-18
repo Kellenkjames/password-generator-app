@@ -1,0 +1,20 @@
+// ---------------------------------------------
+// LAYOUT: CONTAINER
+// ---------------------------------------------
+// Used for global layout positioning and responsive spacing
+// Applies consistent max-width, padding, and vertical alignment
+// ---------------------------------------------
+
+/*
+Max-width and center alignment
+
+Responsive side padding (padding-inline)
+
+Background color (from $color-bg)
+
+Possibly setting the full-page min height + vertical centering (min-height: 100vh)
+
+Mobile-first adjustments using @include respond-to(sm) if needed
+*/
+
+@use '../abstracts/variables' as *;

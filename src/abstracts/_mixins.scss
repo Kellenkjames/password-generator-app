@@ -5,6 +5,47 @@
 // Applied across components to maintain DRY styling
 // ---------------------------------------------
 
-// TODO
+@use './variables' as *;
+
+// Base typography settings for all presets
+@mixin text-base {
+  font-family: $font-primary;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-default;
+}
+
+// ---------------------------------------------
+// TEXT PRESETS
+// ---------------------------------------------
+
+// text-preset-1 (32px / 40px)
+// Use for main heading (e.g., "Password Generator" title at top)
 @mixin text-preset-1 {
+  @include text-base;
+  font-size: $font-size-xl;
+  line-height: $line-height-xl;
+}
+
+// text-preset-2 (24px / 32px)
+// Use for section labels (e.g., "Character Length", "Include Numbers")
+@mixin text-preset-2 {
+  @include text-base;
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+}
+
+// text-preset-3 (18px / 24px)
+// Use for input values or dynamic display (e.g., slider value label)
+@mixin text-preset-3 {
+  @include text-base;
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+}
+
+// text-preset-4 (16px / 22px)
+// Use for button text, helper labels, or strength indicator titles
+@mixin text-preset-4 {
+  @include text-base;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
 }

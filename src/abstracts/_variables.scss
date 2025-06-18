@@ -6,6 +6,31 @@
 // ---------------------------------------------
 
 //
+// TYPOGRAPHY SCALE & TOKENS
+// ---------------------------------------------
+
+$font-primary: 'JetBrains Mono', monospace;
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Font Sizes
+$font-size-xl: 3.2rem; // 32px
+$font-size-lg: 2.4rem; // 24px
+$font-size-md: 1.8rem; // 18px
+$font-size-sm: 1.6rem; // 16px
+
+// Line Heights
+$line-height-xl: 4.2rem;
+$line-height-lg: 3.2rem;
+$line-height-md: 2.4rem;
+$line-height-sm: 2rem;
+
+// Letter Spacing
+$letter-spacing-default: 0;
+$letter-spacing-tight: -0.05rem;
+
+//
 // COLOR PALETTE — Raw Tokens
 // ---------------------------------------------
 

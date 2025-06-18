@@ -23,9 +23,6 @@
   padding: $spacing-400;
   @include flex-column;
 
-  // DEBUG ONLY
-  // border: 1px solid white;
-
   @include respond-to(sm) {
     padding: $spacing-300 $spacing-200;
   }

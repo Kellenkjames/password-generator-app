@@ -96,9 +96,22 @@
           </div>
         </fieldset>
 
-        <!-- You’ll likely enhance this later with strength meter -->
-        <div class="strength-meter">
-          <!-- Placeholder for future JS-controlled meter -->
+        <div class="form__strength">
+          <span class="form__strength-label">Strength</span>
+          <div
+            class="form__strength-meter"
+            role="status"
+            aria-live="polite"
+            aria-label="Password strength"
+          >
+            <span class="form__strength-desc">[Medium]</span>
+            <div class="form__strength-bars">
+              <span class="form__strength-bar">[]</span>
+              <span class="form__strength-bar">[]</span>
+              <span class="form__strength-bar">[]</span>
+              <span class="form__strength-bar">[]</span>
+            </div>
+          </div>
         </div>
 
         <button class="form__submit" type="submit">Generate</button>

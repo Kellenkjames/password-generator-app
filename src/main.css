@@ -136,14 +136,28 @@ a:hover {
   text-decoration: underline;
 }
 
-/*
-Max-width and center alignment
+.container {
+  margin-block: 13.3rem 19.5rem;
+}
+@media (max-width: 500px) {
+  .container {
+    margin-block: 2.4rem;
+  }
+}
 
-Responsive side padding (padding-inline)
-
-Background color (from $color-bg)
-
-Possibly setting the full-page min height + vertical centering (min-height: 100vh)
-
-Mobile-first adjustments using @include respond-to(sm) if needed
-*//*# sourceMappingURL=main.css.map */
+.generator {
+  width: 100%;
+  max-width: 54rem;
+  margin-inline: auto;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .generator {
+    padding: 2.4rem 1.6rem;
+  }
+}/*# sourceMappingURL=main.css.map */

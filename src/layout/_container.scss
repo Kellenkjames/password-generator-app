@@ -5,16 +5,28 @@
 // Applies consistent max-width, padding, and vertical alignment
 // ---------------------------------------------
 
-/*
-Max-width and center alignment
-
-Responsive side padding (padding-inline)
-
-Background color (from $color-bg)
-
-Possibly setting the full-page min height + vertical centering (min-height: 100vh)
-
-Mobile-first adjustments using @include respond-to(sm) if needed
-*/
-
 @use '../abstracts/variables' as *;
+@use '../abstracts/utilities' as *;
+
+.container {
+  margin-block: 13.3rem 19.5rem;
+
+  @include respond-to(sm) {
+    margin-block: $spacing-300;
+  }
+}
+
+.generator {
+  width: 100%;
+  max-width: 54rem;
+  margin-inline: auto;
+  padding: $spacing-400;
+  @include flex-column;
+
+  // DEBUG ONLY
+  // border: 1px solid white;
+
+  @include respond-to(sm) {
+    padding: $spacing-300 $spacing-200;
+  }
+}

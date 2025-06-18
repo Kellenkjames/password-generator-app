@@ -1,0 +1,18 @@
+// ---------------------------------------------
+// COMPONENT: HEADER
+// ---------------------------------------------
+// Styles for the app title and potential future branding elements
+// ---------------------------------------------
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-600;
+
+  &__title {
+    @include text-preset-1;
+    color: $white;
+  }
+}

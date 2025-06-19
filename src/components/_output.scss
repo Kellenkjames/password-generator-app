@@ -4,3 +4,17 @@
 // Styles the password display area and clipboard icon/button
 // Includes “copied” feedback state styling and alignment
 // ---------------------------------------------
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/utilities' as *;
+
+.output {
+  background-color: $gray-800;
+  padding-block: 1.9rem;
+  padding-inline: 3.2rem;
+  margin-bottom: $spacing-300;
+  width: 100%;
+  flex-wrap: nowrap;
+  @include flex-space-between-center;
+}

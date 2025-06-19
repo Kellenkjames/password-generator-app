@@ -74,7 +74,11 @@ select {
 }
 
 button {
+  all: unset;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -147,6 +151,20 @@ a:hover {
   font-size: 2.4rem;
   line-height: 3.2rem;
   color: #817d92;
+}
+
+.output {
+  background-color: #24232c;
+  padding-block: 1.9rem;
+  padding-inline: 3.2rem;
+  margin-bottom: 2.4rem;
+  width: 100%;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container {

@@ -136,6 +136,19 @@ a:hover {
   text-decoration: underline;
 }
 
+.header {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+.header__title {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #817d92;
+}
+
 .container {
   margin-block: 13.3rem 19.5rem;
 }

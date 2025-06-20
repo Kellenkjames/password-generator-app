@@ -300,6 +300,27 @@ a:hover {
   line-height: 2.4rem;
   cursor: pointer;
 }
+.form__strength {
+  width: 100%;
+  background-color: #18171f;
+  padding-block: 1.6rem;
+  padding-inline: 3.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.form__strength-label {
+  color: #817d92;
+  text-transform: uppercase;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
 
 .output {
   background-color: #24232c;
@@ -321,6 +342,15 @@ a:hover {
   letter-spacing: 0;
   font-size: 3.2rem;
   line-height: 4.2rem;
+}
+
+.strength-meter__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {

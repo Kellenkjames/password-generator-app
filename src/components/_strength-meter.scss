@@ -4,3 +4,12 @@
 // Visual indicator of password strength (Too Weak → Strong)
 // Uses color bars and text to reflect generated password quality
 // ---------------------------------------------
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/utilities' as *;
+
+.strength-meter__container {
+  width: 100%;
+  @include flex-row;
+}

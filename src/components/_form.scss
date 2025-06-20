@@ -94,4 +94,19 @@
       cursor: pointer;
     }
   }
+
+  &__strength {
+    width: 100%;
+    background-color: $color-bg-muted;
+    padding-block: $spacing-200;
+    padding-inline: $spacing-400;
+    @include flex-space-between-center;
+    flex-wrap: nowrap;
+
+    &-label {
+      color: $color-text-muted;
+      text-transform: uppercase;
+      @include text-preset-3;
+    }
+  }
 }

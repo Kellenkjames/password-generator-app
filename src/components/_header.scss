@@ -9,10 +9,11 @@
 
 .header {
   text-align: center;
+  width: 100%;
   margin-bottom: $spacing-400;
 
   &__title {
-    @include text-preset-2;
     color: $color-text-muted;
+    @include text-preset-2;
   }
 }

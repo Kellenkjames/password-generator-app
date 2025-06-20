@@ -17,4 +17,9 @@
   width: 100%;
   flex-wrap: nowrap;
   @include flex-space-between-center;
+
+  &__text {
+    color: $gray-700;
+    @include text-preset-1;
+  }
 }

@@ -142,15 +142,16 @@ a:hover {
 
 .header {
   text-align: center;
+  width: 100%;
   margin-bottom: 3.2rem;
 }
 .header__title {
+  color: #817d92;
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   letter-spacing: 0;
   font-size: 2.4rem;
   line-height: 3.2rem;
-  color: #817d92;
 }
 
 .output {
@@ -165,6 +166,14 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+.output__text {
+  color: #54535b;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
 }
 
 .container {

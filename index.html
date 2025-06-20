@@ -29,94 +29,98 @@
         </section>
 
         <form class="form">
-          <div class="form__slider">
-            <span class="form__slider-label">Character Length</span>
-            <span class="form__slider-value visually-hidden">0</span>
-            <label for="length" class="visually-hidden">Slider length:</label>
-            <input
-              class="form__slider-input"
-              type="range"
-              id="length"
-              name="length"
-              min="0"
-              max="100"
-              value="50"
-            />
-          </div>
-
-          <fieldset class="form__checkbox-group">
-            <div class="form__checkbox">
+          <div class="form__wrapper">
+            <div class="form__slider">
+              <div class="form__characters">
+                <span class="form__characters-label">Character Length</span>
+                <span class="form__characters-value">0</span>
+              </div>
+              <label for="length" class="visually-hidden">Slider length:</label>
               <input
-                class="form__checkbox-input"
-                type="checkbox"
-                id="uppercase"
-                name="uppercase"
-                value="0"
+                class="form__slider-input"
+                type="range"
+                id="length"
+                name="length"
+                min="0"
+                max="100"
+                value="50"
               />
-              <label class="form__checkbox-label" for="uppercase">
-                Include Uppercase Letters
-              </label>
             </div>
 
-            <div class="form__checkbox">
-              <input
-                class="form__checkbox-input"
-                type="checkbox"
-                id="lowercase"
-                name="lowercase"
-                value="1"
-              />
-              <label class="form__checkbox-label" for="lowercase">
-                Include Lowercase Letters
-              </label>
-            </div>
+            <fieldset class="form__checkbox-group">
+              <div class="form__checkbox">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="uppercase"
+                  name="uppercase"
+                  value="0"
+                />
+                <label class="form__checkbox-label" for="uppercase">
+                  Include Uppercase Letters
+                </label>
+              </div>
 
-            <div class="form__checkbox">
-              <input
-                class="form__checkbox-input"
-                type="checkbox"
-                id="numbers"
-                name="numbers"
-                value="2"
-              />
-              <label class="form__checkbox-label" for="numbers">
-                Include Numbers
-              </label>
-            </div>
+              <div class="form__checkbox">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="lowercase"
+                  name="lowercase"
+                  value="1"
+                />
+                <label class="form__checkbox-label" for="lowercase">
+                  Include Lowercase Letters
+                </label>
+              </div>
 
-            <div class="form__checkbox">
-              <input
-                class="form__checkbox-input"
-                type="checkbox"
-                id="symbols"
-                name="symbols"
-                value="3"
-              />
-              <label class="form__checkbox-label" for="symbols">
-                Include Symbols
-              </label>
-            </div>
-          </fieldset>
+              <div class="form__checkbox">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="numbers"
+                  name="numbers"
+                  value="2"
+                />
+                <label class="form__checkbox-label" for="numbers">
+                  Include Numbers
+                </label>
+              </div>
 
-          <div class="form__strength">
-            <span class="form__strength-label">Strength</span>
-            <div
-              class="form__strength-meter"
-              role="status"
-              aria-live="polite"
-              aria-label="Password strength"
-            >
-              <span class="form__strength-desc">[Medium]</span>
-              <div class="form__strength-bars">
-                <span class="form__strength-bar">[]</span>
-                <span class="form__strength-bar">[]</span>
-                <span class="form__strength-bar">[]</span>
-                <span class="form__strength-bar">[]</span>
+              <div class="form__checkbox">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="symbols"
+                  name="symbols"
+                  value="3"
+                />
+                <label class="form__checkbox-label" for="symbols">
+                  Include Symbols
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form__strength">
+              <span class="form__strength-label">Strength</span>
+              <div
+                class="form__strength-meter"
+                role="status"
+                aria-live="polite"
+                aria-label="Password strength"
+              >
+                <span class="form__strength-desc">[Medium]</span>
+                <div class="form__strength-bars">
+                  <span class="form__strength-bar">[]</span>
+                  <span class="form__strength-bar">[]</span>
+                  <span class="form__strength-bar">[]</span>
+                  <span class="form__strength-bar">[]</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <button class="form__submit" type="submit">Generate</button>
+            <button class="form__submit" type="submit">Generate</button>
+          </div>
         </form>
       </div>
     </main>

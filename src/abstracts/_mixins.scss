@@ -49,3 +49,59 @@
   font-size: $font-size-sm;
   line-height: $line-height-sm;
 }
+
+// Reusable cross-browser slider styles
+@mixin slider-thumb {
+  width: 100%;
+  appearance: none;
+  height: 0.8rem; // track height
+  background-color: $color-bg-muted;
+  cursor: pointer;
+
+  // Remove default focus ring
+  &:focus {
+    outline: none;
+  }
+
+  // Track styles (WebKit)
+  &::-webkit-slider-runnable-track {
+    height: 0.8rem;
+    background-color: $color-bg-muted;
+  }
+
+  // Track styles (Firefox)
+  &::-moz-range-track {
+    height: 0.8rem;
+    background-color: $color-bg-muted;
+  }
+
+  // Thumb styles (WebKit)
+  &::-webkit-slider-thumb {
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: $gray-200;
+    border: none;
+    margin-top: -0.6rem; // vertically center the thumb
+    transition: background-color 0.2s ease;
+  }
+
+  // Thumb styles (Firefox)
+  &::-moz-range-thumb {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: $gray-200;
+    border: none;
+    transition: background-color 0.2s ease;
+  }
+
+  // Optional hover effect
+  &:hover::-webkit-slider-thumb {
+    background-color: $color-accent;
+  }
+  &:hover::-moz-range-thumb {
+    background-color: $color-accent;
+  }
+}

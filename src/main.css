@@ -154,6 +154,97 @@ a:hover {
   line-height: 3.2rem;
 }
 
+.form {
+  width: 100%;
+  background-color: #24232c;
+}
+.form__wrapper {
+  width: 100%;
+  padding-block: 2.4rem 4.1rem;
+  padding-inline: 3.2rem;
+  gap: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.form__slider {
+  width: 100%;
+}
+.form__slider-input {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 0.8rem;
+  background-color: #18171f;
+  cursor: pointer;
+}
+.form__slider-input:focus {
+  outline: none;
+}
+.form__slider-input::-webkit-slider-runnable-track {
+  height: 0.8rem;
+  background-color: #18171f;
+}
+.form__slider-input::-moz-range-track {
+  height: 0.8rem;
+  background-color: #18171f;
+}
+.form__slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #e6e5ea;
+  border: none;
+  margin-top: -0.6rem;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+.form__slider-input::-moz-range-thumb {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #e6e5ea;
+  border: none;
+  -moz-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+.form__slider-input:hover::-webkit-slider-thumb {
+  background-color: #a4ffaf;
+}
+.form__slider-input:hover::-moz-range-thumb {
+  background-color: #a4ffaf;
+}
+.form__characters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 1.6rem;
+}
+.form__characters-label {
+  color: #e6e5ea;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.form__characters-value {
+  color: #a4ffaf;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+}
+
 .output {
   background-color: #24232c;
   padding-block: 1.9rem;

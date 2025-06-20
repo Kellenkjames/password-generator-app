@@ -4,3 +4,44 @@
 // Layout and spacing for slider, checkboxes, and button container
 // Used to organize inputs and align them inside the main module
 // ---------------------------------------------
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/utilities' as *;
+
+.form {
+  width: 100%;
+  background-color: $gray-800;
+
+  &__wrapper {
+    width: 100%;
+    padding-block: $spacing-300 4.1rem;
+    padding-inline: $spacing-400;
+    gap: $spacing-400;
+    @include flex-column(center, start);
+  }
+
+  &__slider {
+    width: 100%;
+
+    &-input {
+      @include slider-thumb;
+    }
+  }
+
+  &__characters {
+    @include flex-space-between-center;
+    flex-wrap: nowrap;
+    margin-bottom: $spacing-200;
+
+    &-label {
+      color: $gray-200;
+      @include text-preset-3;
+    }
+
+    &-value {
+      color: $green-200;
+      @include text-preset-1;
+    }
+  }
+}

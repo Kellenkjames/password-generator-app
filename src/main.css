@@ -71,6 +71,7 @@ button,
 textarea,
 select {
   font: inherit;
+  margin: 0;
 }
 
 button {
@@ -243,6 +244,61 @@ a:hover {
   letter-spacing: 0;
   font-size: 3.2rem;
   line-height: 4.2rem;
+}
+.form__checkbox-group {
+  all: unset;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+.form__checkbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+.form__checkbox-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: #24232c;
+  border: 0.2rem solid #e6e5ea;
+  border-radius: 0;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.form__checkbox-input:checked {
+  background-color: #a4ffaf;
+  border-color: #a4ffaf;
+}
+.form__checkbox-input:hover {
+  border-color: #ffffff;
+}
+.form__checkbox-input:focus-visible {
+  outline: 2px solid #a4ffaf;
+  outline-offset: 2px;
+}
+.form__checkbox-label {
+  color: #e6e5ea;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  cursor: pointer;
 }
 
 .output {

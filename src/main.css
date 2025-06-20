@@ -155,6 +155,38 @@ a:hover {
   line-height: 3.2rem;
 }
 
+.button {
+  width: 100%;
+  padding-block: 2.05rem;
+  padding-inline: 17.695rem;
+  cursor: pointer;
+  background-color: #a4ffaf;
+  border: 2px solid transparent;
+  gap: 2.4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease, border 0.2s ease;
+}
+.button:hover, .button:active, .button:focus {
+  background-color: transparent;
+  border: 2px solid #a4ffaf;
+}
+.button__generate {
+  text-transform: uppercase;
+  color: #24232c;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+.button:hover .button__generate, .button:active .button__generate, .button:focus .button__generate {
+  color: #a4ffaf;
+}
+
 .form {
   width: 100%;
   background-color: #24232c;

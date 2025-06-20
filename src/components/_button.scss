@@ -4,3 +4,39 @@
 // Styles for the generate button including hover/focus states
 // Handles layout, spacing, and right-arrow icon animation
 // ---------------------------------------------
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/utilities' as *;
+
+.button {
+  width: 100%;
+  padding-block: 2.05rem;
+  padding-inline: 17.695rem;
+  cursor: pointer;
+  background-color: $color-accent;
+  border: 2px solid transparent;
+  gap: $spacing-300;
+  @include flex-row(center, center, nowrap);
+
+  transition: background-color 0.2s ease, border 0.2s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+    border: 2px solid $color-accent;
+  }
+
+  &__generate {
+    text-transform: uppercase;
+    color: $gray-800;
+    @include text-preset-3;
+  }
+
+  &:hover &__generate,
+  &:active &__generate,
+  &:focus &__generate {
+    color: $color-accent;
+  }
+}

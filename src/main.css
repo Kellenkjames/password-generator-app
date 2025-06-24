@@ -158,7 +158,6 @@ a:hover {
 .button {
   width: 100%;
   padding-block: 2.05rem;
-  padding-inline: 17.695rem;
   cursor: pointer;
   background-color: #a4ffaf;
   border: 2px solid transparent;
@@ -183,7 +182,10 @@ a:hover {
   font-size: 1.8rem;
   line-height: 2.4rem;
 }
-.button:hover .button__generate, .button:active .button__generate, .button:focus .button__generate {
+.button__icon {
+  color: #24232c;
+}
+.button:hover .button__generate, .button:active .button__generate, .button:focus .button__generate, .button:hover .button__icon, .button:active .button__icon, .button:focus .button__icon {
   color: #a4ffaf;
 }
 
@@ -374,6 +376,9 @@ a:hover {
   letter-spacing: 0;
   font-size: 3.2rem;
   line-height: 4.2rem;
+}
+.output__copy {
+  cursor: pointer;
 }
 
 .strength-meter__container {

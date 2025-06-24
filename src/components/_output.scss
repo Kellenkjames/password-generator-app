@@ -22,4 +22,8 @@
     color: $gray-700;
     @include text-preset-1;
   }
+
+  &__copy {
+    cursor: pointer;
+  }
 }

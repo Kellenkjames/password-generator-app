@@ -12,7 +12,7 @@
 .button {
   width: 100%;
   padding-block: 2.05rem;
-  padding-inline: 17.695rem;
+
   cursor: pointer;
   background-color: $color-accent;
   border: 2px solid transparent;
@@ -34,9 +34,16 @@
     @include text-preset-3;
   }
 
+  &__icon {
+    color: $gray-800;
+  }
+
   &:hover &__generate,
   &:active &__generate,
-  &:focus &__generate {
+  &:focus &__generate,
+  &:hover &__icon,
+  &:active &__icon,
+  &:focus &__icon {
     color: $color-accent;
   }
 }

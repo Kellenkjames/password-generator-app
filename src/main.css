@@ -75,7 +75,11 @@ select {
 }
 
 button {
-  all: unset;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -158,24 +162,29 @@ a:hover {
 .button {
   width: 100%;
   padding-block: 2.05rem;
-  cursor: pointer;
   background-color: #a4ffaf;
   border: 2px solid transparent;
+  color: #24232c;
+  cursor: pointer;
   gap: 2.4rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.2s ease, border 0.2s ease;
+  transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
 }
 .button:hover, .button:active, .button:focus {
   background-color: transparent;
-  border: 2px solid #a4ffaf;
+  border-color: #a4ffaf;
+  color: #a4ffaf;
+}
+.button:focus-visible {
+  outline: 2px dashed #a4ffaf;
+  outline-offset: 4px;
 }
 .button__generate {
   text-transform: uppercase;
-  color: #24232c;
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   letter-spacing: 0;
@@ -183,10 +192,8 @@ a:hover {
   line-height: 2.4rem;
 }
 .button__icon {
-  color: #24232c;
-}
-.button:hover .button__generate, .button:active .button__generate, .button:focus .button__generate, .button:hover .button__icon, .button:active .button__icon, .button:focus .button__icon {
-  color: #a4ffaf;
+  fill: currentColor;
+  transition: fill 0.2s ease;
 }
 
 .form {

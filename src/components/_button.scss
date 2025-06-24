@@ -12,38 +12,39 @@
 .button {
   width: 100%;
   padding-block: 2.05rem;
-
-  cursor: pointer;
   background-color: $color-accent;
   border: 2px solid transparent;
+  color: $gray-800;
+  cursor: pointer;
   gap: $spacing-300;
   @include flex-row(center, center, nowrap);
 
-  transition: background-color 0.2s ease, border 0.2s ease;
+  transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
 
   &:hover,
   &:active,
   &:focus {
     background-color: transparent;
-    border: 2px solid $color-accent;
+    border-color: $color-accent;
+    color: $color-accent;
   }
+
+  &:focus-visible {
+    outline: 2px dashed $color-accent;
+    outline-offset: 4px;
+  }
+
+  // ---------------------------------------------
+  // ELEMENTS
+  // ---------------------------------------------
 
   &__generate {
     text-transform: uppercase;
-    color: $gray-800;
     @include text-preset-3;
   }
 
   &__icon {
-    color: $gray-800;
-  }
-
-  &:hover &__generate,
-  &:active &__generate,
-  &:focus &__generate,
-  &:hover &__icon,
-  &:active &__icon,
-  &:focus &__icon {
-    color: $color-accent;
+    fill: currentColor;
+    transition: fill 0.2s ease;
   }
 }

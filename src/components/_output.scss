@@ -24,6 +24,14 @@
   }
 
   &__copy {
+    color: $color-accent;
     cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $white;
+    }
   }
 }

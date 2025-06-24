@@ -378,7 +378,12 @@ a:hover {
   line-height: 4.2rem;
 }
 .output__copy {
+  color: #a4ffaf;
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+.output__copy:hover, .output__copy:active, .output__copy:focus {
+  color: #ffffff;
 }
 
 .strength-meter__container {

@@ -22,7 +22,7 @@
         </header>
 
         <section class="output" aria-live="polite">
-          <span class="output__text">[P4$5W0rD!]</span>
+          <span class="output__value">[P4$5W0rD!]</span>
           <svg
             class="output__copy"
             width="21"
@@ -36,7 +36,7 @@
           </svg>
         </section>
 
-        <form class="form">
+        <div class="form">
           <div class="form__wrapper">
             <div class="form__slider">
               <div class="form__characters">
@@ -162,7 +162,7 @@
             </div>
 
             <button class="button">
-              <span class="button__generate" type="submit">Generate</span>
+              <span class="button__generate" type="button">Generate</span>
               <svg
                 class="button__icon"
                 width="13"
@@ -178,8 +178,9 @@
               </svg>
             </button>
           </div>
-        </form>
+        </div>
       </div>
     </main>
+    <script type="module" src="/src/js/controller.js"></script>
   </body>
 </html>

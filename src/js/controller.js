@@ -1,5 +1,5 @@
-import { generatePassword } from './model';
-// import { renderPassword, renderErrorState } from './view';
+import { generatePassword } from './model.js';
+import { renderErrorState, renderPassword } from './view.js';
 
 /** @type {HTMLInputElement} */
 const form = document.querySelector('.form');
@@ -20,7 +20,7 @@ const numbersCheckbox = form.querySelector('#numbers');
 const symbolsCheckbox = form.querySelector('#symbols');
 
 /** @type {HTMLButtonElement} */
-const generateBtn = form.querySelector('.button__generate');
+const generateBtn = form.querySelector('.button');
 
 /**
  * Gets the current value from the slider as a number.
@@ -50,12 +50,13 @@ const getUserOptions = () => ({
  * - Calls password generator
  * - Handles valid or invalid states
  */
-generateBtn.addEventListener('click', () => {
+generateBtn.addEventListener('click', e => {
   const sliderLength = getSliderValue();
   const options = getUserOptions();
   const password = generatePassword(sliderLength, options);
+  console.log(password);
 
-  if (!password) return renderErrorState(); // Placeholder for future View logic
+  if (!password) return renderErrorState();
 
-  renderPassword(password); // Placeholder for future View logic
+  renderPassword(password);
 });

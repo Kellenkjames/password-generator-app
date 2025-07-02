@@ -1,6 +1,6 @@
-import { passwordCharSets } from './constants/characterPools';
-import { getRandomChar } from './utils/getRandomChar';
-import { shuffleArray } from './utils/shuffleArray';
+import { passwordCharSets } from './constants/characterPools.js';
+import { getRandomChar } from './utils/getRandomChar.js';
+import { shuffleArray } from './utils/shuffleArray.js';
 
 /**
  * Generates a secure password based on user-defined criteria.

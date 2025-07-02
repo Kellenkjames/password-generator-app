@@ -401,7 +401,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 }
-.output__text {
+.output__value {
   color: #54535b;
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;

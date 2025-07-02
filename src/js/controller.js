@@ -2,22 +2,25 @@ import { generatePassword } from './model';
 // import { renderPassword, renderErrorState } from './view';
 
 /** @type {HTMLInputElement} */
-const slider = document.querySelector('.form__slider-input');
+const form = document.querySelector('.form');
 
 /** @type {HTMLInputElement} */
-const uppercaseCheckbox = document.querySelector('#uppercase');
+const slider = form.querySelector('.form__slider-input');
 
 /** @type {HTMLInputElement} */
-const lowercaseCheckbox = document.querySelector('#lowercase');
+const uppercaseCheckbox = form.querySelector('#uppercase');
 
 /** @type {HTMLInputElement} */
-const numbersCheckbox = document.querySelector('#numbers');
+const lowercaseCheckbox = form.querySelector('#lowercase');
 
 /** @type {HTMLInputElement} */
-const symbolsCheckbox = document.querySelector('#symbols');
+const numbersCheckbox = form.querySelector('#numbers');
+
+/** @type {HTMLInputElement} */
+const symbolsCheckbox = form.querySelector('#symbols');
 
 /** @type {HTMLButtonElement} */
-const generateBtn = document.querySelector('.button__generate');
+const generateBtn = form.querySelector('.button__generate');
 
 /**
  * Gets the current value from the slider as a number.

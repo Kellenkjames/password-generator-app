@@ -20,6 +20,7 @@
 
   &__value {
     color: $gray-700;
+    padding-right: $spacing-400;
     @include text-preset-1;
   }
 

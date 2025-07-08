@@ -403,6 +403,7 @@ a:hover {
 }
 .output__value {
   color: #54535b;
+  padding-right: 3.2rem;
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   letter-spacing: 0;

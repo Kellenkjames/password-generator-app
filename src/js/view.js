@@ -38,7 +38,7 @@ export const clearErrorState = () => {
 };
 
 /**
- * Update slider value in DOM
+ * Renders the slider value in the DOM
  *
  * @param {Number} value
  */

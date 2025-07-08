@@ -1,7 +1,7 @@
 import { generatePassword } from './model.js';
-import { renderErrorState, renderPassword } from './view.js';
+import { renderErrorState, renderPassword, renderSliderValue } from './view.js';
 
-/** @type {HTMLInputElement} */
+/** @type {HTMLFormElement} */
 const form = document.querySelector('.form');
 
 /** @type {HTMLInputElement} */
@@ -26,7 +26,7 @@ const generateBtn = form.querySelector('.button');
  * Gets the current value from the slider as a number.
  * @returns {number} Password length selected by the user.
  */
-const getSliderValue = () => Number(slider.value);
+const getPasswordLength = () => Number(slider.value);
 
 /**
  * Gathers checkbox states into a structured options object.
@@ -51,12 +51,24 @@ const getUserOptions = () => ({
  * - Handles valid or invalid states
  */
 generateBtn.addEventListener('click', e => {
-  const sliderLength = getSliderValue();
+  e.preventDefault(); // Optional if not inside a <form>, but safe fallback
+  const length = getPasswordLength();
   const options = getUserOptions();
-  const password = generatePassword(sliderLength, options);
-  console.log(password);
+  const password = generatePassword(length, options);
 
   if (!password) return renderErrorState();
-
   renderPassword(password);
+});
+
+/**
+ * Syncs slider UI label with initial value on page load.
+ */
+renderSliderValue(getPasswordLength());
+
+/**
+ * Updates the character count label when the slider is moved.
+ * @param {Event} e
+ */
+slider.addEventListener('input', () => {
+  renderSliderValue(getPasswordLength());
 });

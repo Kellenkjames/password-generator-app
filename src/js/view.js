@@ -4,6 +4,9 @@ const passwordOutput = document.querySelector('.output__value');
 /** @type {HTMLElement} */
 const errorMessage = document.querySelector('.form__error'); // Optional element
 
+/** @type {HTMLInputElement} */
+const sliderValue = document.querySelector('.form__characters-value');
+
 /**
  * Render the generated password into the UI
  * @param {string} password
@@ -27,9 +30,18 @@ export const renderErrorState = () => {
 /**
  * Clear any previously rendered error state
  */
-export function clearErrorState() {
+export const clearErrorState = () => {
   if (errorMessage) {
     errorMessage.textContent = '';
     errorMessage.classList.add('hidden');
   }
-}
+};
+
+/**
+ * Update slider value in DOM
+ *
+ * @param {Number} value
+ */
+export const renderSliderValue = value => {
+  sliderValue.textContent = value;
+};

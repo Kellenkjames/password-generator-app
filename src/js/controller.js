@@ -1,5 +1,11 @@
 import { generatePassword } from './model.js';
-import { renderErrorState, renderPassword, renderSliderValue } from './view.js';
+import {
+  getPasswordText,
+  renderErrorState,
+  renderPassword,
+  renderSliderValue,
+  showCopiedState,
+} from './view.js';
 
 /** @type {HTMLFormElement} */
 const form = document.querySelector('.form');
@@ -21,6 +27,9 @@ const symbolsCheckbox = form.querySelector('#symbols');
 
 /** @type {HTMLButtonElement} */
 const generateBtn = form.querySelector('.button');
+
+/** @type {HTMLButtonElement} */
+const copyBtn = document.querySelector('.output__copy');
 
 /**
  * Gets the current value from the slider as a number.
@@ -71,4 +80,14 @@ renderSliderValue(getPasswordLength());
  */
 slider.addEventListener('input', () => {
   renderSliderValue(getPasswordLength());
+});
+
+copyBtn.addEventListener('click', () => {
+  const password = getPasswordText();
+  if (!password) return;
+
+  navigator.clipboard
+    .writeText(password)
+    .then(showCopiedState)
+    .catch(err => console.error('Failed to copy:', err));
 });

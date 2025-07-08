@@ -411,9 +411,29 @@ a:hover {
   line-height: 4.2rem;
 }
 .output__copy {
+  position: relative;
   color: #a4ffaf;
   cursor: pointer;
   transition: color 0.2s ease;
+}
+.output__copy.copied::after {
+  content: "copied";
+  position: absolute;
+  top: -2rem;
+  font-size: 1rem;
+  color: #a4ffaf;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  pointer-events: none;
+  animation: fadeOut 1.5s ease-out forwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .output__copy:hover, .output__copy:active, .output__copy:focus {
   color: #ffffff;

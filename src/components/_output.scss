@@ -25,9 +25,33 @@
   }
 
   &__copy {
+    position: relative;
     color: $color-accent;
     cursor: pointer;
     transition: color 0.2s ease;
+
+    &.copied {
+      &::after {
+        content: 'copied';
+        position: absolute;
+        top: -2rem;
+        font-size: 1rem;
+        color: $color-accent;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        pointer-events: none;
+        animation: fadeOut 1.5s ease-out forwards;
+      }
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
 
     &:hover,
     &:active,

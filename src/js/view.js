@@ -4,9 +4,6 @@ const passwordOutput = document.querySelector('.output__value');
 /** @type {HTMLElement} */
 const errorMessage = document.querySelector('.form__error'); // Optional element
 
-/** @type {HTMLInputElement} */
-const sliderValue = document.querySelector('.form__characters-value');
-
 /**
  * Render the generated password into the UI
  * @param {string} password
@@ -43,5 +40,15 @@ export const clearErrorState = () => {
  * @param {Number} value
  */
 export const renderSliderValue = value => {
+  const sliderValue = document.querySelector('.form__characters-value');
   sliderValue.textContent = value;
 };
+
+export const showCopiedState = () => {
+  const copyBtn = document.querySelector('.output__copy');
+  copyBtn.classList.add('copied');
+  setTimeout(() => copyBtn.classList.remove('copied'), 1500);
+};
+
+export const getPasswordText = () =>
+  document.querySelector('.output__value')?.textContent || '';

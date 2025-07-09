@@ -18,22 +18,37 @@
   flex-wrap: nowrap;
   @include flex-space-between-center;
 
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column;
+  }
+
   &__value {
+    display: block;
     color: $gray-700;
     padding-right: $spacing-400;
     @include text-preset-1;
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+      word-wrap: break-word;
+      padding-right: 0;
+      margin-bottom: $spacing-200;
+    }
   }
 
   &__copied {
     text-transform: uppercase;
     color: $color-accent;
     @include text-preset-3;
+
     opacity: 0;
+    visibility: hidden;
     transition: opacity 0.3s ease;
     pointer-events: none;
 
     &.visible {
       opacity: 1;
+      visibility: visible;
     }
   }
 

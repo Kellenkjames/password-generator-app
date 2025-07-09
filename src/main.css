@@ -211,6 +211,11 @@ a:hover {
   justify-content: center;
   align-items: flex-start;
 }
+@media (max-width: 500px) {
+  .form__wrapper {
+    padding: 2rem 1rem;
+  }
+}
 .form__slider {
   width: 100%;
 }
@@ -309,7 +314,12 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
+}
+@media (max-width: 500px) {
+  .form__strength {
+    flex-direction: column;
+    padding: 2rem;
+  }
 }
 .form__strength-label {
   color: #817d92;
@@ -319,6 +329,11 @@ a:hover {
   letter-spacing: 0;
   font-size: 1.8rem;
   line-height: 2.4rem;
+}
+@media (max-width: 500px) {
+  .form__strength-label {
+    margin-bottom: 1rem;
+  }
 }
 .form__error {
   width: 100%;
@@ -413,7 +428,13 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .output {
+    flex-direction: column;
+  }
+}
 .output__value {
+  display: block;
   color: #54535b;
   padding-right: 3.2rem;
   font-family: "JetBrains Mono", monospace;
@@ -421,6 +442,14 @@ a:hover {
   letter-spacing: 0;
   font-size: 3.2rem;
   line-height: 4.2rem;
+}
+@media (max-width: 500px) {
+  .output__value {
+    width: 100%;
+    word-wrap: break-word;
+    padding-right: 0;
+    margin-bottom: 1.6rem;
+  }
 }
 .output__copied {
   text-transform: uppercase;
@@ -431,11 +460,13 @@ a:hover {
   font-size: 1.8rem;
   line-height: 2.4rem;
   opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s ease;
   pointer-events: none;
 }
 .output__copied.visible {
   opacity: 1;
+  visibility: visible;
 }
 .output__copy {
   position: relative;

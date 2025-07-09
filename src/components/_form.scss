@@ -19,6 +19,10 @@
     padding-inline: $spacing-400;
     gap: $spacing-400;
     @include flex-column(center, start);
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 2rem 1rem;
+    }
   }
 
   &__slider {
@@ -61,12 +65,20 @@
     padding-block: $spacing-200;
     padding-inline: $spacing-400;
     @include flex-space-between-center;
-    flex-wrap: nowrap;
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      padding: 2rem;
+    }
 
     &-label {
       color: $color-text-muted;
       text-transform: uppercase;
       @include text-preset-3;
+
+      @media (max-width: $breakpoint-sm) {
+        margin-bottom: 1rem;
+      }
     }
   }
 

@@ -320,6 +320,18 @@ a:hover {
   font-size: 1.8rem;
   line-height: 2.4rem;
 }
+.form__error {
+  width: 100%;
+  text-align: center;
+  color: #f64a4a;
+  transition: opacity 0.3s ease-in-out;
+}
+.form__error.hidden {
+  opacity: 0;
+}
+.form__error.visible {
+  opacity: 1;
+}
 
 .form__checkbox-group {
   display: flex;

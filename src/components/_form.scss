@@ -69,4 +69,19 @@
       @include text-preset-3;
     }
   }
+
+  &__error {
+    width: 100%;
+    text-align: center;
+    color: $color-strength-weak;
+    transition: opacity 0.3s ease-in-out;
+
+    &.hidden {
+      opacity: 0;
+    }
+
+    &.visible {
+      opacity: 1;
+    }
+  }
 }

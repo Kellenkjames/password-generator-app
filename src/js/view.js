@@ -15,12 +15,14 @@ export const renderPassword = password => {
 
 /**
  * Display an error message or visual state when password generation fails
+ * @param {string} message
  */
 export const renderErrorState = () => {
   passwordOutput.textContent = ''; // Clear previous output
   if (errorMessage) {
     errorMessage.textContent = 'Please select at least one character type.';
     errorMessage.classList.remove('hidden');
+    errorMessage.classList.add('visible');
   }
 };
 

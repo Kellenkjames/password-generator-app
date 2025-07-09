@@ -64,6 +64,25 @@ generateBtn.addEventListener('click', e => {
   e.preventDefault();
   const length = getPasswordLength();
   const options = getUserOptions();
+
+  // Validate: Minimum length
+  if (length < 4) {
+    renderErrorState('Password must be at least 4 characters');
+    return;
+  }
+
+  // Validate: At least one option selected
+  const noOptionsSelected =
+    !options.useUppercase &&
+    !options.useLowercase &&
+    !options.useNumbers &&
+    !options.useSymbols;
+
+  if (noOptionsSelected) {
+    renderErrorState('Please select at least one character type.');
+    return;
+  }
+
   const password = generatePassword(length, options);
 
   if (!password) return renderErrorState();

@@ -14,18 +14,17 @@
   @include flex-row;
   gap: $spacing-200;
 
-  opacity: 0;
-  transition: opacity 0.3s ease;
-
-  &.visible {
-    opacity: 1;
-  }
-
   /* Description text (Strength level label) */
   &__desc {
     text-transform: uppercase;
     @include text-preset-2;
-    transition: color 0.3s ease;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &.visible {
+      opacity: 1;
+    }
   }
 
   /* Container for bars */

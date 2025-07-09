@@ -71,7 +71,10 @@ export const renderPasswordStrength = level => {
   const meter = document.querySelector('.strength-meter');
   const desc = meter.querySelector('.strength-meter__desc');
 
-  // 1. Clear all possible modifier classes
+  desc.textContent = level;
+  desc.classList.add('visible');
+
+  // Clean up previous strength modifier class
   meter.classList.remove(
     'strength-meter--too-weak',
     'strength-meter--weak',
@@ -79,12 +82,8 @@ export const renderPasswordStrength = level => {
     'strength-meter--strong'
   );
 
-  // 2. Add the new modifier class
-  meter.classList.add(`strength-meter--${level}`);
-
-  // 3. Update the label text (optional: format nicely)
-  desc.textContent = level.replace('-', ' ').toUpperCase();
-
-  // 4. Make sure it’s visible (if hidden initially)
-  meter.classList.add('visible');
+  if (level)
+    meter.classList.add(
+      `strength-meter--${level.toLowerCase().replace(/\s/g, '-')}`
+    );
 };

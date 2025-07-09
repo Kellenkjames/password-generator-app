@@ -60,3 +60,31 @@ export const showCopiedState = () => {
  */
 export const getPasswordText = () =>
   document.querySelector('.output__value')?.textContent || '';
+
+/**
+ * Renders the password strength level visually.
+ * Adds BEM modifier class and label, and ensures visibility.
+ *
+ * @param {"too-weak" | "weak" | "medium" | "strong"} level - Password strength category
+ */
+export const renderPasswordStrength = level => {
+  const meter = document.querySelector('.strength-meter');
+  const desc = meter.querySelector('.strength-meter__desc');
+
+  // 1. Clear all possible modifier classes
+  meter.classList.remove(
+    'strength-meter--too-weak',
+    'strength-meter--weak',
+    'strength-meter--medium',
+    'strength-meter--strong'
+  );
+
+  // 2. Add the new modifier class
+  meter.classList.add(`strength-meter--${level}`);
+
+  // 3. Update the label text (optional: format nicely)
+  desc.textContent = level.replace('-', ' ').toUpperCase();
+
+  // 4. Make sure it’s visible (if hidden initially)
+  meter.classList.add('visible');
+};

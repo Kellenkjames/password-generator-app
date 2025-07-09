@@ -9,54 +9,61 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/utilities' as *;
 
-.strength-meter__container {
-  width: 100%;
-  gap: $spacing-200;
-  @include flex-row;
-}
-
+/* Core container (used for fade-in) */
 .strength-meter {
+  @include flex-row;
+  gap: $spacing-200;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  /* Description text (Strength level label) */
   &__desc {
     text-transform: uppercase;
     @include text-preset-2;
+    transition: color 0.3s ease;
   }
 
+  /* Container for bars */
   &__bars {
     height: 2.8rem;
     gap: $spacing-100;
     @include flex-row(center, center, nowrap);
   }
 
+  /* Base bar style */
   &__bar {
     width: 1rem;
     height: 100%;
-    border: 2px solid $gray-200; // default: inactive
+    border: 2px solid $gray-200;
     background-color: transparent;
-    transition: background-color 0.2s ease, border 0.2s ease;
+    transition: background-color 0.3s ease, border 0.3s ease;
   }
 
-  &--too-weak &__bar:nth-child(-n + 1),
-  &--weak &__bar:nth-child(-n + 2),
-  &--medium &__bar:nth-child(-n + 3),
-  &--strong &__bar:nth-child(-n + 4) {
-    background-color: $green-200; // this will be dynamically swapped per state
-    border-color: transparent;
-  }
+  /* ACTIVE BAR STATE CLASSES */
+  // We override colors *per level* with modifier class + :nth-child selector
 
-  // For each state, override background-color accordingly
   &--too-weak &__bar:nth-child(-n + 1) {
     background-color: $red-500;
+    border-color: transparent;
   }
 
   &--weak &__bar:nth-child(-n + 2) {
     background-color: $orange-400;
+    border-color: transparent;
   }
 
   &--medium &__bar:nth-child(-n + 3) {
     background-color: $yellow-300;
+    border-color: transparent;
   }
 
   &--strong &__bar:nth-child(-n + 4) {
     background-color: $green-200;
+    border-color: transparent;
   }
 }

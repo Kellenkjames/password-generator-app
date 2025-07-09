@@ -439,16 +439,24 @@ a:hover {
   color: #ffffff;
 }
 
-.strength-meter__container {
-  width: 100%;
-  gap: 1.6rem;
+/* Core container (used for fade-in) */
+.strength-meter {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 1.6rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* Description text (Strength level label) */
+  /* Container for bars */
+  /* Base bar style */
+  /* ACTIVE BAR STATE CLASSES */
 }
-
+.strength-meter.visible {
+  opacity: 1;
+}
 .strength-meter__desc {
   text-transform: uppercase;
   font-family: "JetBrains Mono", monospace;
@@ -456,6 +464,7 @@ a:hover {
   letter-spacing: 0;
   font-size: 2.4rem;
   line-height: 3.2rem;
+  transition: color 0.3s ease;
 }
 .strength-meter__bars {
   height: 2.8rem;
@@ -471,23 +480,23 @@ a:hover {
   height: 100%;
   border: 2px solid #e6e5ea;
   background-color: transparent;
-  transition: background-color 0.2s ease, border 0.2s ease;
-}
-.strength-meter--too-weak .strength-meter__bar:nth-child(-n+1), .strength-meter--weak .strength-meter__bar:nth-child(-n+2), .strength-meter--medium .strength-meter__bar:nth-child(-n+3), .strength-meter--strong .strength-meter__bar:nth-child(-n+4) {
-  background-color: #a4ffaf;
-  border-color: transparent;
+  transition: background-color 0.3s ease, border 0.3s ease;
 }
 .strength-meter--too-weak .strength-meter__bar:nth-child(-n+1) {
   background-color: #f64a4a;
+  border-color: transparent;
 }
 .strength-meter--weak .strength-meter__bar:nth-child(-n+2) {
   background-color: #fb7c58;
+  border-color: transparent;
 }
 .strength-meter--medium .strength-meter__bar:nth-child(-n+3) {
   background-color: #f8cd65;
+  border-color: transparent;
 }
 .strength-meter--strong .strength-meter__bar:nth-child(-n+4) {
   background-color: #a4ffaf;
+  border-color: transparent;
 }
 
 .container {

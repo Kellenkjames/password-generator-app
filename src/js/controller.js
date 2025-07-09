@@ -1,8 +1,9 @@
-import { generatePassword } from './model.js';
+import { evaluatePasswordStrength, generatePassword } from './model.js';
 import {
   getPasswordText,
   renderErrorState,
   renderPassword,
+  renderPasswordStrength,
   renderSliderValue,
   showCopiedState,
 } from './view.js';
@@ -60,13 +61,16 @@ const getUserOptions = () => ({
  * - Handles valid or invalid states
  */
 generateBtn.addEventListener('click', e => {
-  e.preventDefault(); // Optional if not inside a <form>, but safe fallback
+  e.preventDefault();
   const length = getPasswordLength();
   const options = getUserOptions();
   const password = generatePassword(length, options);
 
   if (!password) return renderErrorState();
   renderPassword(password);
+
+  const strengthLevel = evaluatePasswordStrength(password);
+  renderPasswordStrength(strengthLevel);
 });
 
 /**

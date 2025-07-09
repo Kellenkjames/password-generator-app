@@ -213,7 +213,7 @@ a:hover {
 }
 @media (max-width: 500px) {
   .form__wrapper {
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
   }
 }
 .form__slider {
@@ -500,6 +500,11 @@ a:hover {
   /* Base bar style */
   /* ACTIVE BAR STATE CLASSES */
 }
+@media (max-width: 500px) {
+  .strength-meter {
+    gap: 0;
+  }
+}
 .strength-meter__desc {
   text-transform: uppercase;
   font-family: "JetBrains Mono", monospace;
@@ -512,6 +517,11 @@ a:hover {
 }
 .strength-meter__desc.visible {
   opacity: 1;
+}
+@media (max-width: 500px) {
+  .strength-meter__desc {
+    margin-right: 1.6rem;
+  }
 }
 .strength-meter__bars {
   height: 2.8rem;

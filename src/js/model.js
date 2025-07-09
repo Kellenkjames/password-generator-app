@@ -40,3 +40,23 @@ export const generatePassword = (length, options) => {
 
   return shuffleArray(result).join('');
 };
+
+/**
+ * Evaluates password strength based on length and character diversity.
+ *
+ * @param {string} password - The generated password.
+ * @returns {'too-weak' | 'weak' | 'medium' | 'strong'} Semantic strength label.
+ */
+export const evaluatePasswordStrength = password => {
+  let score = 0;
+  if (password.length >= 8) score++;
+  if (/[a-z]/.test(password)) score++;
+  if (/[A-Z]/.test(password)) score++;
+  if (/\d/.test(password)) score++;
+  if (/[^a-zA-Z0-9]/.test(password)) score++;
+
+  if (score <= 1) return 'too-weak';
+  if (score === 2) return 'weak';
+  if (score === 3) return 'medium';
+  return 'strong';
+};

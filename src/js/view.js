@@ -50,10 +50,15 @@ export const renderSliderValue = value => {
  * Temporarily shows a visual "Copied" feedback state on the clipboard button.
  * Adds the `copied` class for styling, then removes it after a short delay.
  */
-export const showCopiedState = () => {
-  const copyBtn = document.querySelector('.output__copy');
-  copyBtn.classList.add('copied');
-  setTimeout(() => copyBtn.classList.remove('copied'), 1500);
+export const renderCopiedMessage = () => {
+  const copiedEl = document.querySelector('.output__copied');
+  if (!copiedEl) return;
+
+  copiedEl.classList.add('visible');
+
+  setTimeout(() => {
+    copiedEl.classList.remove('visible');
+  }, 2000);
 };
 
 /**

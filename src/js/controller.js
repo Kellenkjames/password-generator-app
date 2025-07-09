@@ -1,11 +1,11 @@
 import { evaluatePasswordStrength, generatePassword } from './model.js';
 import {
   getPasswordText,
+  renderCopiedMessage,
   renderErrorState,
   renderPassword,
   renderPasswordStrength,
   renderSliderValue,
-  showCopiedState,
 } from './view.js';
 
 /** @type {HTMLFormElement} */
@@ -111,6 +111,6 @@ copyBtn.addEventListener('click', () => {
 
   navigator.clipboard
     .writeText(password)
-    .then(showCopiedState)
+    .then(renderCopiedMessage)
     .catch(err => console.error('Failed to copy:', err));
 });

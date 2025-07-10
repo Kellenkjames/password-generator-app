@@ -23,7 +23,7 @@
   }
 
   &__value {
-    color: $gray-700;
+    color: $gray-200;
     padding-right: $spacing-400;
     @include text-preset-1;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;

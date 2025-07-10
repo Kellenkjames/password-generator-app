@@ -429,7 +429,7 @@ a:hover {
   align-items: center;
 }
 .output__value {
-  color: #e6e5ea;
+  color: #54535b;
   padding-right: 3.2rem;
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;
@@ -438,12 +438,8 @@ a:hover {
   line-height: 4.2rem;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
-.output__value.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(0.5rem);
-}
 .output__value.visible {
+  color: #e6e5ea;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

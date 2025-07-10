@@ -10,7 +10,6 @@ const errorMessage = document.querySelector('.form__error'); // Optional element
  */
 export const renderPassword = password => {
   passwordOutput.textContent = password;
-  passwordOutput.classList.remove('hidden');
   passwordOutput.classList.add('visible');
   clearErrorState();
 };

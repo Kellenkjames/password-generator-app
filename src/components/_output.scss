@@ -19,18 +19,13 @@
   @include flex-space-between-center;
 
   &__value {
-    color: $gray-200;
+    color: $gray-700;
     padding-right: $spacing-400;
     @include text-preset-1;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
-    &.hidden {
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(0.5rem);
-    }
-
     &.visible {
+      color: $gray-200;
       opacity: 1;
       visibility: visible;
       transform: translateY(0);

@@ -17,7 +17,7 @@
     width: 100%;
     padding-block: $spacing-300 4.1rem;
     padding-inline: $spacing-400;
-    gap: $spacing-400;
+    gap: $spacing-300;
     @include flex-column(center, start);
 
     @media (max-width: $breakpoint-sm) {

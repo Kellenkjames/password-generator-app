@@ -204,7 +204,7 @@ a:hover {
   width: 100%;
   padding-block: 2.4rem 4.1rem;
   padding-inline: 3.2rem;
-  gap: 3.2rem;
+  gap: 2.4rem;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;

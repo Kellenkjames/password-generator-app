@@ -18,10 +18,6 @@
   flex-wrap: nowrap;
   @include flex-space-between-center;
 
-  @media (max-width: $breakpoint-sm) {
-    // flex-direction: column;
-  }
-
   &__value {
     color: $gray-200;
     padding-right: $spacing-400;

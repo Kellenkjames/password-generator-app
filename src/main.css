@@ -428,13 +428,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 500px) {
-  .output {
-    flex-direction: column;
-  }
-}
 .output__value {
-  display: block;
   color: #54535b;
   padding-right: 3.2rem;
   font-family: "JetBrains Mono", monospace;
@@ -442,13 +436,24 @@ a:hover {
   letter-spacing: 0;
   font-size: 3.2rem;
   line-height: 4.2rem;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.output__value.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.5rem);
+}
+.output__value.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 @media (max-width: 500px) {
   .output__value {
     width: 100%;
+    margin-bottom: 1.6rem;
     word-wrap: break-word;
     padding-right: 0;
-    margin-bottom: 1.6rem;
   }
 }
 .output__copied {
